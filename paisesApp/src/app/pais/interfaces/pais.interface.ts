@@ -1,4 +1,3 @@
-
 export interface Country {
     name:           string;
     topLevelDomain: string[];
@@ -7,29 +6,29 @@ export interface Country {
     callingCodes:   string[];
     capital:        string;
     altSpellings:   string[];
-    region:         Region;
+    region:         string;
     subregion:      string;
     population:     number;
     latlng:         number[];
     demonym:        string;
-    area:           number | null;
-    gini:           number | null;
+    area:           number;
+    gini:           number;
     timezones:      string[];
     borders:        string[];
     nativeName:     string;
-    numericCode:    null | string;
+    numericCode:    string;
     currencies:     Currency[];
     languages:      Language[];
     translations:   Translations;
     flag:           string;
     regionalBlocs:  RegionalBloc[];
-    cioc:           null | string;
+    cioc:           string;
 }
 
 export interface Currency {
-    code:   null | string;
-    name:   null | string;
-    symbol: null | string;
+    code:   string;
+    name:   string;
+    symbol: string;
 }
 
 export interface Language {
@@ -39,93 +38,22 @@ export interface Language {
     nativeName: string;
 }
 
-export enum Region {
-    Africa = "Africa",
-    Americas = "Americas",
-    Asia = "Asia",
-    Empty = "",
-    Europe = "Europe",
-    Oceania = "Oceania",
-}
-
 export interface RegionalBloc {
-    acronym:       Acronym;
-    name:          Name;
-    otherAcronyms: OtherAcronym[];
-    otherNames:    OtherName[];
-}
-
-export enum Acronym {
-    Al = "AL",
-    Asean = "ASEAN",
-    Au = "AU",
-    Cais = "CAIS",
-    Caricom = "CARICOM",
-    Cefta = "CEFTA",
-    Eeu = "EEU",
-    Efta = "EFTA",
-    Eu = "EU",
-    Nafta = "NAFTA",
-    Pa = "PA",
-    Saarc = "SAARC",
-    Usan = "USAN",
-}
-
-export enum Name {
-    AfricanUnion = "African Union",
-    ArabLeague = "Arab League",
-    AssociationOfSoutheastAsianNations = "Association of Southeast Asian Nations",
-    CaribbeanCommunity = "Caribbean Community",
-    CentralAmericanIntegrationSystem = "Central American Integration System",
-    CentralEuropeanFreeTradeAgreement = "Central European Free Trade Agreement",
-    EurasianEconomicUnion = "Eurasian Economic Union",
-    EuropeanFreeTradeAssociation = "European Free Trade Association",
-    EuropeanUnion = "European Union",
-    NorthAmericanFreeTradeAgreement = "North American Free Trade Agreement",
-    PacificAlliance = "Pacific Alliance",
-    SouthAsianAssociationForRegionalCooperation = "South Asian Association for Regional Cooperation",
-    UnionOfSouthAmericanNations = "Union of South American Nations",
-}
-
-export enum OtherAcronym {
-    Eaeu = "EAEU",
-    Sica = "SICA",
-    Unasul = "UNASUL",
-    Unasur = "UNASUR",
-    Uzan = "UZAN",
-}
-
-export enum OtherName {
-    AccordDeLibreÉchangeNordAméricain = "Accord de Libre-échange Nord-Américain",
-    AlianzaDelPacífico = "Alianza del Pacífico",
-    CaribischeGemeenschap = "Caribische Gemeenschap",
-    CommunautéCaribéenne = "Communauté Caribéenne",
-    ComunidadDelCaribe = "Comunidad del Caribe",
-    JāmiAtAdDuwalAlArabīyah = "Jāmiʻat ad-Duwal al-ʻArabīyah",
-    LeagueOfArabStates = "League of Arab States",
-    SistemaDeLaIntegraciónCentroamericana = "Sistema de la Integración Centroamericana,",
-    SouthAmericanUnion = "South American Union",
-    TratadoDeLibreComercioDeAméricaDelNorte = "Tratado de Libre Comercio de América del Norte",
-    UmojaWaAfrika = "Umoja wa Afrika",
-    UnieVanZuidAmerikaanseNaties = "Unie van Zuid-Amerikaanse Naties",
-    UnionAfricaine = "Union africaine",
-    UniãoAfricana = "União Africana",
-    UniãoDeNaçõesSulAmericanas = "União de Nações Sul-Americanas",
-    UniónAfricana = "Unión Africana",
-    UniónDeNacionesSuramericanas = "Unión de Naciones Suramericanas",
-    الاتحادالأفريقي = "الاتحاد الأفريقي",
-    جامعةالدولالعربية = "جامعة الدول العربية",
+    acronym:       string;
+    name:          string;
+    otherAcronyms: any[];
+    otherNames:    any[];
 }
 
 export interface Translations {
-    de: null | string;
-    es: null | string;
-    fr: null | string;
-    ja: null | string;
-    it: null | string;
+    de: string;
+    es: string;
+    fr: string;
+    ja: string;
+    it: string;
     br: string;
     pt: string;
-    nl: null | string;
-    hr: null | string;
+    nl: string;
+    hr: string;
     fa: string;
 }
