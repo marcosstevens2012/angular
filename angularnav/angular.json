@@ -6,13 +6,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pipesApp": {
+    "angularnav": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pipesApp",
+            "outputPath": "dist/angularnav",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,9 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js", 
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -53,13 +54,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -68,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pipesApp:build"
+            "browserTarget": "angularnav:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "pipesApp:build:production"
+              "browserTarget": "angularnav:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pipesApp:build"
+            "browserTarget": "angularnav:build"
           }
         },
         "test": {
@@ -116,16 +117,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "pipesApp:serve"
+            "devServerTarget": "angularnav:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "pipesApp:serve:production"
+              "devServerTarget": "angularnav:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "pipesApp"
+  "defaultProject": "angularnav"
 }
