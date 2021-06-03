@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-error-page',
-  templateUrl: './error-page.component.html',
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
   styles: [
   ]
 })
-export class ErrorPageComponent implements OnInit {
+export class RegistroComponent implements OnInit {
 
   constructor() { }
 

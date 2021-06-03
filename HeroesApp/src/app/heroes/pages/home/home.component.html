@@ -1,1 +1,38 @@
-<p>home works!</p>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar>
+      <span>Menu</span>
+      <button mat-button
+      (click)="sidenav.toggle()">
+        <mat-icon class="mat-18">menu</mat-icon>
+      </button>
+   </mat-toolbar>
+
+   <mat-nav-list dense>
+
+           <a (click)="sidenav.toggle()" routerLink="./listado" mat-list-item href="">
+            <mat-icon mat-list-icon class="mat-18">label</mat-icon>
+            <span>Listado de Heroes</span>
+           </a>
+
+
+          <a (click)="sidenav.toggle()" routerLink="./listado" mat-list-item href="">
+            <mat-icon mat-list-icon class="mat-18">add</mat-icon>
+            <span>Listado de Heroes</span>
+          </a>
+
+   </mat-nav-list>
+  </mat-sidenav>
+
+ <mat-toolbar>
+    <button mat-button
+    (click)="sidenav.toggle()">
+      <mat-icon class="mat-18">menu</mat-icon>
+    </button>
+ </mat-toolbar>
+
+ <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+
+
